@@ -27,3 +27,8 @@ debug = true
 # error: failed to load bc of "salty.2a057q60-cgu.0": <Paste>
 lto = "thin"
 opt-level = "s"
+# newer rustc requires an explicit panic strategy for no-std staticlib targets
+panic = "abort"
+
+[profile.dev]
+panic = "abort"
